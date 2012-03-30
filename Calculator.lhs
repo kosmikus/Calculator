@@ -473,7 +473,7 @@ and the 'l' because we're going to treat the operator as left-associative.
 Let's jump right to the definition, and explain it afterwards:
 
 > chainl1 :: Parser a -> Parser (a -> a -> a) -> Parser a
-> chainl1 px pop = foldl (flip ($)) <$> px <*> (many (flip <$> pop <*> px))
+> chainl1 px pop = L.foldl (flip ($)) <$> px <*> (many (flip <$> pop <*> px))
 
 Assume we have an input to parse that looks as follows:
 
