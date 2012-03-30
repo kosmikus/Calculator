@@ -716,6 +716,14 @@ And similarly for the continuation version of 'run':
 >                        putStrLn ("  " ++ show r)
 >                        loop s'
 
+Main program
+============
+
+We just start the interactive loop.
+
+> main :: IO ()
+> main = runInteractive'
+
 Batch interpreter
 =================
 
